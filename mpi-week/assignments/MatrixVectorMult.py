@@ -52,11 +52,11 @@ else :
 
 
 #########Send b to all procs and scatter A (each proc has its own local matrix#####
-#LocalMatrix = 
+LocalMatrix = lil_matrix((SIZE, SIZE))
 # Scatter the matrix A
 
 #####################Compute A*b locally#######################################
-#LocalX = 
+LocalX = np.zeros(SIZE)
 
 start = MPI.Wtime()
 matrixVectorMult(LocalMatrix, b, LocalX)
